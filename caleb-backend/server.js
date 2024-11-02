@@ -12,7 +12,7 @@ const bcrypt = require('bcryptjs');
 // const VolunteerHistoryRoutes = require('./routes/VolunteerHistoryRoutes');
 // const VolunteerMatchingRoutes = require('./routes/VolunteerMatchingRoutes');
 // const EventManagementRoutes = require('./routes/EventManagementRoutes');
-const User = require('./models/User');
+const User = require('./models/User'); //needed to capitalize user.js to User.js
 const axios = require('axios');
 
 const app = express();
