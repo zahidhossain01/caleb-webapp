@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.notifications-container {
+    padding: 2rem;
+    margin-top: 135px; 
+}
+
+.notifications-paper {
+    padding: 2rem;
+    background-color: #ffffff; 
+    border-radius: 10px;
+}
+
+.notifications-title {
+    text-align: center;
+    font-family: "Orbitron", sans-serif !important; 
+    margin-bottom: 2rem;
+    color: #ea00d9;
+}
+
+.notifications-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f5f5f5; 
+    border-radius: 6px;
+}
+
+.MuiBadge-colorPrimary {
+    background-color: #133e7c; 
+}
+
+.MuiBadge-colorSecondary {
+    background-color: #711c91; 
+}
+
+.MuiBadge-colorWarning {
+    background-color: #0abdc6; 
+}
+
+.MuiBadge-badge {
+    font-family: "Orbitron", sans-serif !important;
+    min-width: 30px;
+    height: 30px;
+    transform: translateY(0); 
+    display: flex;
+    align-items: center; /* Align vertically */
+    border-bottom: none;
+    margin-top: 10px;
+}
+
+.MuiDivider-root {
+    margin: 1rem 0;
+    border: none;
+}
+
+.MuiListItemText-primary {
+    font-weight: bold;
+    font-family: "Roboto", sans-serif !important;
+}
+
+.MuiListItemText-secondary {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #555555;
+}
+
+.notification-read {
+    opacity: 0.6; /* Adjust as needed */
+  }
+  
+  .notification-unread {
+    opacity: 1;
+  }

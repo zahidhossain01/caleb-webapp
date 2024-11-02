@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.event-container {
+    padding: 2rem;
+    margin-top: 135px;
+}
+
+.event-paper {
+    padding: 2rem;
+    background-color: #ffffff; 
+}
+
+.event-title {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 20px;
+    padding-top: 75px;
+    padding-bottom: 50px;
+  }
+
+.event-error {
+    margin-bottom: 1rem;
+}
+
+.event-input {
+    margin-top: 5px;
+    margin-bottom: 5px; /* spacing between fields */
+}
+
+.event-button {
+    background-color: #ea00d9;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+}
+
+.event-button:hover {
+    background-color: #d800b2; /* slightly darker shade on hover */
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.register-container {
+    padding: 2rem;
+    margin-top: 135px;
+}
+
+.register-paper {
+    padding: 2rem;
+    background-color: #ffffff; 
+}
+
+.register-title {
+    text-align: center;
+    margin-bottom: 30px !important;
+    font-family: "Orbitron", sans-serif !important;
+    margin-bottom: 50px;
+    font-family: "Orbitron", sans-serif !important;
+
+}
+
+.register-error {
+    margin-bottom: 1rem;
+}
+
+.register-input {
+    margin-top: 5px;
+    margin-bottom: 5px; /* spacing between fields */
+}
+
+.register-button {
+    background-color: #ea00d9 !important;
+    transition: background-color 0.3s ease;
+    color: white !important;
+    font-family: "Orbitron", sans-serif !important;
+}
+
+.register-button:hover {
+    background-color: #d800b2; /* slightly darker shade on hover */
+}
+
+.register-error {
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif !important; 
+    font-size: 15px; 
+    background-color: #711c91 !important;
+    color: white !important;
+}
+
+.register-error .MuiAlert-icon {
+    color: white !important; 
+}
+
+.register-success {
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif !important; 
+    font-size: 15px; 
+    background-color: #0abdc6 !important; /* blue background for success */
+    color: white !important;
+}
+
+.register-success .MuiAlert-icon {
+    color: white !important; 
+}
+
+p {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 15px;
+    text-align: center;
+}

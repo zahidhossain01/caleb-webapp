@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.additional-info-container {
+    padding: 2rem;
+    margin-top: 135px;
+}
+
+.additional-info-paper {
+    padding: 2rem;
+    background-color: #ffffff; /* background color of form */
+}
+
+.additional-info-title {
+    text-align: center;
+    margin-bottom: 30px !important;
+    font-family: "Orbitron", sans-serif !important;
+    margin-bottom: 2rem;
+    font-family: "Orbitron", sans-serif !important;
+}
+
+.additional-info-error {
+    margin-bottom: 1rem;
+}
+
+.additional-info-input {
+    margin-top: 5px;
+    margin-bottom: 5px; /* spacing between fields */
+}
+
+.additional-info-textarea {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.additional-info-date-picker {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.additional-info-add-button {
+    margin-top: 1rem;
+}
+
+.additional-info-submit-button {
+    background-color: #ea00d9 !important;
+    transition: background-color 0.3s ease;
+    font-family: "Orbitron", sans-serif !important;
+    color: white !important;
+}
+
+.additional-info-submit-button:hover {
+    background-color: #d800b2; /* slightly darker shade on hover */
+}
+
+.success-message {
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Orbitron', sans-serif !important; 
+    font-size: 15px; 
+    background-color: #0abdc6 !important; /* blue background for success */
+    color: white !important;
+    text-align: center;
+}

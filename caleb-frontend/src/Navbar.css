@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">');
+
+.navbar {
+    background-color: #ea00d9 !important;
+    z-index: 1300; /* ensure it stays above other elements */
+}
+
+.navbar-button {
+    color: white !important; 
+    color: white !important;
+    margin-right: 1rem; /* spacing between buttons */
+    font-family: "Orbitron", system-ui !important;
+    font-family: "Orbitron", system-ui !important;
+}
+
+.navbar-container {
+    color: inherit;
+    display: flex;
+    justify-content: flex-end; /* align buttons to the right */
+    width: 100%;
+}
+
+.menu-item {
+    font-family: "Orbitron", system-ui !important;
+}
+
