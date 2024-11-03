@@ -13,7 +13,7 @@ function Home() {
     const fetchData = async() => {
       try {
         // const reponse = await axios.get('http://localhost:4000/api/hello');
-        const reponse = await axios.get('${apiUrl}/api/hello');
+        const reponse = await axios.get(`${apiUrl}/api/hello`);
         console.log(reponse.data);
         SetResponse(reponse.data);
       }

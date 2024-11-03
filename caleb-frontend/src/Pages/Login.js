@@ -19,7 +19,7 @@ const Login = ({ handleLogin }) => {
     setErrorMessage('');
 
     try {
-      const userResponse = await fetch('${apiUrl}/login', { 
+      const userResponse = await fetch(`${apiUrl}/login`, { 
         method: 'POST', 
         headers: {
           'Content-type': 'application/json',
