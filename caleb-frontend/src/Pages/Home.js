@@ -3,6 +3,7 @@ import { Container, Box, Typography } from '@mui/material';
 import './Home.css'; 
 import axios from 'axios';
 
+const apiUrl = process.env.API_BASE_URL;
 
 function Home() {
   const [response, SetResponse] = useState();
@@ -11,7 +12,8 @@ function Home() {
 
     const fetchData = async() => {
       try {
-        const reponse = await axios.get('http://localhost:4000/api/hello');
+        // const reponse = await axios.get('http://localhost:4000/api/hello');
+        const reponse = await axios.get('${apiURL}/api/hello');
         console.log(reponse.data);
         SetResponse(reponse.data);
       }
