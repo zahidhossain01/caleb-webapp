@@ -4,7 +4,6 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 // const fs = require('fs');
-// const JWT_SECRET = "not-strong-secret";
 const JWT_SECRET = process.env.JWT_SECRET;
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
@@ -13,7 +12,7 @@ const NotificationsRoutes = require('./routes/NotificationsRoutes');
 const VolunteerHistoryRoutes = require('./routes/VolunteerHistoryRoutes');
 const VolunteerMatchingRoutes = require('./routes/VolunteerMatchingRoutes');
 const EventManagementRoutes = require('./routes/EventManagementRoutes');
-const User = require('./models/User'); //needed to capitalize user.js to User.js
+const User = require('./models/User'); //needed to capitalize user.js to User.js | git mv user.js User.js
 const axios = require('axios');
 
 const app = express();
