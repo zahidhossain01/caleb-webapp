@@ -9,10 +9,10 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 // const path = require('path');
-// const NotificationsRoutes = require('./routes/NotificationsRoutes');
-// const VolunteerHistoryRoutes = require('./routes/VolunteerHistoryRoutes');
-// const VolunteerMatchingRoutes = require('./routes/VolunteerMatchingRoutes');
-// const EventManagementRoutes = require('./routes/EventManagementRoutes');
+const NotificationsRoutes = require('./routes/NotificationsRoutes');
+const VolunteerHistoryRoutes = require('./routes/VolunteerHistoryRoutes');
+const VolunteerMatchingRoutes = require('./routes/VolunteerMatchingRoutes');
+const EventManagementRoutes = require('./routes/EventManagementRoutes');
 const User = require('./models/User'); //needed to capitalize user.js to User.js
 const axios = require('axios');
 
