@@ -141,9 +141,11 @@ const AdditionalInfo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const userId = localStorage.getItem('userId');
     const userEmail = localStorage.getItem('userEmail');
 
-    if (!userEmail) {
+    // if (!userEmail) {
+    if (!userId) {
       setErrorMessage('No user logged in. Please log in.');
       return;
     }

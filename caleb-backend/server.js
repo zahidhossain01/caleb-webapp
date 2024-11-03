@@ -70,17 +70,17 @@ const authenticateJWT = (req, res, next) => {
 
 app.use(authenticateJWT);
 
+
+// // Registering routes
 app.use('/login', LoginRoutes);
 app.use('/register', RegisterRoutes);
 app.use('/profile', ProfileRoutes);
+app.use('/api/volunteerHistory', VolunteerHistoryRoutes);
+app.use('/api/volunteer-matching', VolunteerMatchingRoutes);
+app.use('/api/eventmanagement', EventManagementRoutes);
+app.use('/api/notifications', NotificationsRoutes);  // This will handle all notification-related routes
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-// // Registering routes
-// app.use('/api/notifications', NotificationsRoutes);  // This will handle all notification-related routes
-// app.use('/api/volunteerHistory', VolunteerHistoryRoutes);
-// app.use('/api/volunteer-matching', VolunteerMatchingRoutes);
-// app.use('/api/eventmanagement', EventManagementRoutes);
 
 // // Port of our server
 // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
