@@ -4,6 +4,8 @@ import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } 
 import axios from 'axios';
 import './VolunteerMatching.css'; 
 
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
 function VolunteerMatching() {
   const [volunteers, setVolunteers] = useState([]);
   // const [events, setEvents] = useState([]);
@@ -17,7 +19,7 @@ function VolunteerMatching() {
   useEffect(() => {
     const fetchVolunteers = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/api/volunteer-matching/volunteers', {
+        const res = await axios.get(`{apiUrl}/api/volunteer-matching/volunteers`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },

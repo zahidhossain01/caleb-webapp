@@ -23,6 +23,8 @@ import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { AddCircle, RemoveCircle } from '@mui/icons-material';
 
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
 const skillsList = ['Python', 'C++', 'C#', 'C', 'JavaScript', 'HTML', 'IT', 'Computer Repair'];
 const urgencies = ['Low', 'Medium', 'High'];
 
@@ -50,7 +52,7 @@ function EventManagement() {
   //const [volunteers, setVolunteers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:4000/api/eventmanagement')
+    axios.get(`${apiUrl}/api/eventmanagement`)
       .then(response => {
         console.log('Fetched events:', response.data);
         setEvents(response.data);
@@ -102,7 +104,7 @@ function EventManagement() {
         //const response = axios.post('http://localhost:4000/api/eventmanagement', { formData });
 
 
-        const response = fetch('http://localhost:4000/api/eventmanagement', {
+        const response = fetch(`${apiUrl}/api/eventmanagement`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json; charset=utf-8'

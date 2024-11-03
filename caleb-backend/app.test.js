@@ -9,7 +9,8 @@ require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors({ origin: 'http://localhost:3000' }));
+// app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors()) //lazy, allow all cors requests
 
 const usersFilePath = path.join(__dirname, 'users.json');
 

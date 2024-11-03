@@ -3,12 +3,14 @@ import { Container, List, ListItem, Paper, Typography } from '@mui/material';
 import axios from 'axios';
 import './VolunteerHistory.css';  // CSS for styling
 
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
 function VolunteerHistory() {
   const [history, setHistory] = useState([]);
 
   // Connects back end to front end
   useEffect(() => {
-    axios.get('http://localhost:4000/api/volunteerHistory/events', {
+    axios.get(`${apiUrl}/api/volunteerHistory/events`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`  // Assuming JWT authentication
       }
