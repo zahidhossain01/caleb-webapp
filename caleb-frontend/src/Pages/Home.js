@@ -3,7 +3,7 @@ import { Container, Box, Typography } from '@mui/material';
 import './Home.css'; 
 import axios from 'axios';
 
-const apiUrl = process.env.API_BASE_URL;
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
 function Home() {
   const [response, SetResponse] = useState();

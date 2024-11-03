@@ -4,7 +4,7 @@ import { Container, TextField, Button, Box, Typography, Paper, Alert, CircularPr
 import { useNavigate } from 'react-router-dom'; 
 import './Login.css';  
 
-const apiUrl = process.env.API_BASE_URL;
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
 const Login = ({ handleLogin }) => {
   const navigate = useNavigate(); 
