@@ -4,7 +4,7 @@ import { Container, TextField, Button, Box, Typography, Paper, Alert } from '@mu
 // import axios from 'axios';
 import './Register.css';
 
-const apiUrl = process.env.REACT_APP_API_BASE_URL;
+
 
 const Register = ({ handleLoginState }) => {
   const [firstName, setFirstName] = useState('');
@@ -30,7 +30,7 @@ const Register = ({ handleLoginState }) => {
 
     try {
       // make call to api to register
-      const registerResponse = await fetch(`${apiUrl}/register`, {
+      const registerResponse = await fetch('http://localhost:4000/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const Register = ({ handleLoginState }) => {
       if (registerResponse.ok) {
         console.log('Register successful', registerData);
 
-        const loginResponse = await fetch(`${apiUrl}/login`, {
+        const loginResponse = await fetch('http://localhost:4000/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

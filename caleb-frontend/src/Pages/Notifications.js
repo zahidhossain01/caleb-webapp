@@ -4,8 +4,6 @@ import axios from 'axios';  // For making API requests
 import './Notifications.css';  // CSS for styling
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-const apiUrl = process.env.REACT_APP_API_BASE_URL;
-
 function Notifications() {
   const [notifications, setNotifications] = useState([]);
   const [loading, setLoading] = useState(true);  // Add loading state
@@ -16,7 +14,7 @@ function Notifications() {
     const fetchNotifications = async () => {
       try {
         // Replace 'http://localhost:4000' with your deployed backend URL if applicable
-        const res = await axios.get(`${apiUrl}/api/notifications`, {
+        const res = await axios.get('http://localhost:4000/api/notifications', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`  // Assuming JWT authentication
           }

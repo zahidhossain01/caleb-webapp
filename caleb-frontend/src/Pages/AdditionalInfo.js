@@ -9,8 +9,6 @@ import { AddCircle, RemoveCircle } from '@mui/icons-material';
 import { Cancel as CancelIcon } from '@mui/icons-material';
 import './AdditionalInfo.css'; 
 
-const apiUrl = process.env.REACT_APP_API_BASE_URL;
-
 const skillsList = [
   "Python",
   "JavaScript",
@@ -110,7 +108,7 @@ const AdditionalInfo = () => {
     const fetchProfile = async () => {
       if (id) {
         try {
-          const profileResponse = await fetch(`${apiUrl}/profile/${id}`);
+          const profileResponse = await fetch(`http://localhost:4000/profile/${id}`);
           const profileData = await profileResponse.json();
 
           if (profileResponse.ok) {
@@ -143,11 +141,9 @@ const AdditionalInfo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const userId = localStorage.getItem('userId');
     const userEmail = localStorage.getItem('userEmail');
 
-    // if (!userEmail) {
-    if (!userId) {
+    if (!userEmail) {
       setErrorMessage('No user logged in. Please log in.');
       return;
     }
@@ -165,7 +161,7 @@ const AdditionalInfo = () => {
     };
 
     // Send a POST request to save profile data
-    fetch(`${apiUrl}/api/profile`, {
+    fetch('http://localhost:4000/api/profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -4,8 +4,6 @@ import { Container, TextField, Button, Box, Typography, Paper, Alert, CircularPr
 import { useNavigate } from 'react-router-dom'; 
 import './Login.css';  
 
-const apiUrl = process.env.REACT_APP_API_BASE_URL;
-
 const Login = ({ handleLogin }) => {
   const navigate = useNavigate(); 
   const [email, setEmail] = useState('');
@@ -19,7 +17,7 @@ const Login = ({ handleLogin }) => {
     setErrorMessage('');
 
     try {
-      const userResponse = await fetch(`${apiUrl}/login`, { 
+      const userResponse = await fetch('http://localhost:4000/login', { 
         method: 'POST', 
         headers: {
           'Content-type': 'application/json',

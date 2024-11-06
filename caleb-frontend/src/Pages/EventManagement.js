@@ -23,16 +23,14 @@ import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { AddCircle, RemoveCircle } from '@mui/icons-material';
 
-const apiUrl = process.env.REACT_APP_API_BASE_URL;
-
 const skillsList = ['Python', 'C++', 'C#', 'C', 'JavaScript', 'HTML', 'IT', 'Computer Repair'];
 const urgencies = ['Low', 'Medium', 'High'];
 
 
 function EventManagement() {
   const [formData, setFormData] = useState({
-    eventName: '',
-    eventDescription: '',
+    name: '',
+    details: '',
     location: '',
     requiredSkills: [],
     urgency: '',
@@ -52,7 +50,7 @@ function EventManagement() {
   //const [volunteers, setVolunteers] = useState([]);
 
   useEffect(() => {
-    axios.get(`${apiUrl}/api/eventmanagement`)
+    axios.get('http://localhost:4000/api/eventmanagement')
       .then(response => {
         console.log('Fetched events:', response.data);
         setEvents(response.data);
@@ -85,8 +83,8 @@ function EventManagement() {
 
   const validate = () => {
     let tempErrors = {};
-    tempErrors.eventName = formData.eventName ? '' : 'Event Name is required';
-    tempErrors.eventDescription = formData.eventDescription ? '' : 'Event Description is required';
+    tempErrors.name = formData.name ? '' : 'Event Name is required';
+    tempErrors.details = formData.details ? '' : 'Event Description is required';
     tempErrors.location = formData.location ? '' : 'Location is required';
     tempErrors.requiredSkills = formData.requiredSkills.length ? '' : 'Please select at least one skill';
     tempErrors.urgency = formData.urgency ? '' : 'Urgency level is required';
@@ -104,7 +102,7 @@ function EventManagement() {
         //const response = axios.post('http://localhost:4000/api/eventmanagement', { formData });
 
 
-        const response = fetch(`${apiUrl}/api/eventmanagement`, {
+        const response = fetch('http://localhost:4000/api/eventmanagement', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json; charset=utf-8'
@@ -154,7 +152,7 @@ function EventManagement() {
               fullWidth
               required
               label="Event Name:"
-              name="eventName"
+              name="name"
               value={formData.eventTitle}
               onChange={handleInputChange}
               inputProps={{ maxLength: 100 }}
@@ -164,10 +162,10 @@ function EventManagement() {
               fullWidth
               required
               label="Event Description:"
-              name="eventDescription"
+              name="details"
               multiline
               rows={4}
-              value={formData.eventDescription}
+              value={formData.details}
               onChange={handleInputChange}
             />
 
