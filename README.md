@@ -1,1 +1,2 @@
-wahoo
+React frontend
+Express backend
