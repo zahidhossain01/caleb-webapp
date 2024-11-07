@@ -37,7 +37,7 @@ function VolunteerMatching() {
   const handleVolunteerSelect = (e) => {
     const selectedId = e.target.value;
     setSelectedVolunteer(selectedId);
-  
+    console.log(selectedId);
     const selectedVolunteerObj = volunteers.find(v => v.id === parseInt(selectedId));
     setSelectedVolunteerName(selectedVolunteerObj?.name || '');
   
@@ -87,8 +87,8 @@ function VolunteerMatching() {
               className="volunteer-matching-input"
             >
               {volunteers.map((volunteer) => (
-                <MenuItem key={volunteer.id} value={volunteer.id}>
-                  {volunteer.name}
+                <MenuItem key={volunteer._id} value={volunteer._id}>
+                  {volunteer.firstName + ' ' + volunteer.lastName}
                 </MenuItem>
               ))}
             </TextField>
