@@ -141,30 +141,29 @@ const AdditionalInfo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const userEmail = localStorage.getItem('userEmail');
-
-    if (!userEmail) {
+    const token = localStorage.getItem('token');
+    if (!token) {
       setErrorMessage('No user logged in. Please log in.');
       return;
     }
 
     // Validate form fields
-    if (!formData.fullName || !formData.address1 || !formData.city || !formData.state || !formData.zip || formData.skills.length === 0) {
+    if (!formData.firstName || !formData.lastName || !formData.address1 || !formData.city || !formData.state || !formData.zip || formData.skills.length === 0) {
       setErrorMessage('Please fill out all required fields.');
       return;
     }
 
     // Prepare the payload to send
     const payload = {
-      email: userEmail,
       profile: formData
     };
 
     // Send a POST request to save profile data
-    fetch('http://localhost:4000/api/profile', {
+    fetch('http://localhost:4000/profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify(payload),
     })
